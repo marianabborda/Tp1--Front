@@ -104,7 +104,9 @@ En la portada del sitio se implementaron distintas funciones dinámicas mediante
 **1. Cambio de color del título (Hero)**
 
 **Ubicación:** Sección _Hero_ (portada principal, texto “Hola Mundo”).
-**Descripción:** Al hacer clic sobre el título principal, el color del texto cambia dinámicamente. Si se vuelve a hacer clic, el color retorna a su estado original.**Capturas:**
+**Descripción:** Al hacer clic sobre el título principal, el color del texto cambia dinámicamente. Si se vuelve a hacer clic, el color retorna a su estado original.
+
+**Capturas:**
 Estado inicial del título (color normal)
 
 <p style="text-align: center;">
@@ -120,7 +122,9 @@ Estado luego del clic (color modificado)
 **2. Animación de texto “Scramble” (Hero)**
 
 **Ubicación:** Sección _Hero_.
-**Descripción:** El texto “Hola Mundo” presenta una animación donde las letras se mezclan aleatoriamente antes de mostrarse correctamente. Además el texto cambia automáticamente cada 3 segundos, se muestran versiones en distintos idiomas y al pasar el mouse por encima, la animación se activa nuevamente.**Captura:**
+**Descripción:** El texto “Hola Mundo” presenta una animación donde las letras se mezclan aleatoriamente antes de mostrarse correctamente. Además el texto cambia automáticamente cada 3 segundos, se muestran versiones en distintos idiomas y al pasar el mouse por encima, la animación se activa nuevamente.
+
+**Captura:**
 
 <p style="text-align: center;">
   <img src="assets/img/scramble.png" width="300">
@@ -129,7 +133,9 @@ Estado luego del clic (color modificado)
 **3. Efecto magnético en íconos de tecnologías**
 
 **Ubicación:** Sección Tecnologías.
-**Descripción:** Los íconos reaccionan al movimiento del mouse generando un efecto “magnético”, desplazándose levemente hacia el cursor. **Captura:**
+**Descripción:** Los íconos reaccionan al movimiento del mouse generando un efecto “magnético”, desplazándose levemente hacia el cursor.
+
+**Captura:**
 
 <p style="text-align: center;">
   <img src="assets/img/tecnologia1.png" width="300">
@@ -138,7 +144,9 @@ Estado luego del clic (color modificado)
 **4. Animación de resaltado en íconos (hover/click)**
 
 **Ubicación:** Sección Tecnologías.
-**Descripción:** Cuando el usuario pasa el mouse o hace clic sobre un ícono, este se resalta temporalmente mediante una animación.**Captura:**
+**Descripción:** Cuando el usuario pasa el mouse o hace clic sobre un ícono, este se resalta temporalmente mediante una animación.
+
+**Captura:**
 
 <p style="text-align: center;">
   <img src="assets/img/tecnologia1.png" width="300">
@@ -149,7 +157,9 @@ Estado luego del clic (color modificado)
 **1. Acordeón Interactivo de Decisiones**
 
 **Ubicación:** Decisiones de Diseño.
-**Descripción:** Permite expandir o colapsar las tarjetas de decisiones mediante la adición/eliminación de la clase .expanded. Esto ayuda a organizar el contenido denso y permite que el usuario lea solo lo que le interesa.**Captura:**
+**Descripción:** Permite expandir o colapsar las tarjetas de decisiones mediante la adición/eliminación de la clase .expanded. Esto ayuda a organizar el contenido denso y permite que el usuario lea solo lo que le interesa.
+
+**Captura:**
 
 <p style="text-align: center;">
   <img src="assets/img/bitacora1.png" width="300">
@@ -158,7 +168,9 @@ Estado luego del clic (color modificado)
 **2. Contador Animado de Estadísticas**
 
 **Ubicación** Estadísticas del Proyecto.
-**Descripción:** Al cargar la página, los números de las estadísticas (páginas, archivos, scripts) realizan un conteo ascendente desde 0 hasta el valor objetivo definido en el atributo data-target, utilizando una transición fluida de aproximadamente 1 segundo.**Captura:**
+**Descripción:** Al cargar la página, los números de las estadísticas (páginas, archivos, scripts) realizan un conteo ascendente desde 0 hasta el valor objetivo definido en el atributo data-target, utilizando una transición fluida de aproximadamente 1 segundo.
+
+**Captura:**
 
 <p style="text-align: center;">
   <img src="assets/img/bitacora2.png" width="300">
@@ -172,49 +184,59 @@ Estado luego del clic (color modificado)
 
 **1. Revelación de Información Extra**
 **Ubicación:** Sección (#sobre-mi)
-**Descripción:** Al activarse el evento click, el script verifica el estado de visualización del contenedor #info-extra. Si está oculto (display: none), lo muestra y cambia el texto del botón; de lo contrario, lo oculta nuevamente. **Captura:**
+**Descripción:** Al activarse el evento click, el script verifica el estado de visualización del contenedor #info-extra. Si está oculto (display: none), lo muestra y cambia el texto del botón; de lo contrario, lo oculta nuevamente.
+
+**Captura:**
 
   <p style="text-align: center;">
-  <img src="assets/img/info1_tomas.png" width="300">
+  <img src="assets/img/info1_tomas.png" width="250">
 </p>
 
 <p style="text-align: center;">
-  <img src="assets/img/info2_tomas.png" width="300">
+  <img src="assets/img/info2_tomas.png" width="250">
 </p>
 
 **2. Menú Navegación**
 **Ubicación:** Encabezado.
-**Descripción:** Se integró la lógica en main.js para el funcionamiento del menú hamburguesa (nav-toggle) en dispositivos móviles, asegurando que el menú se cierre automáticamente al seleccionar una sección. **Captura:**
+**Descripción:** Se integró la lógica en main.js para el funcionamiento del menú hamburguesa (nav-toggle) en dispositivos móviles, asegurando que el menú se cierre automáticamente al seleccionar una sección.
+
+**Captura:**
 
  <p style="text-align: center;">
-  <img src="assets/img/menu_hamburguesa_tomas.png" width="300">
+  <img src="assets/img/menu_hamburguesa_tomas.png" width="250">
 </p>
 
 #### RODRIGO (rodrigo.js)
 
 **1. Menú Lateral Desplegable (Hamburguesa)**
 **Ubicación:** Encabezado.
-**Descripción:** Permite abrir y cerrar el menú de navegación en dispositivos móviles al alternar la clase .open en el contenedor del menú. Además, incluye una lógica para cerrar automáticamente el menú cuando el usuario hace clic en cualquier enlace de sección.**Captura:**
+**Descripción:** Permite abrir y cerrar el menú de navegación en dispositivos móviles al alternar la clase .open en el contenedor del menú. Además, incluye una lógica para cerrar automáticamente el menú cuando el usuario hace clic en cualquier enlace de sección.
+
+**Captura:**
 
  <p style="text-align: center;">
-  <img src="assets/img/menu_rodrigo.png" width="300">
+  <img src="assets/img/menu_rodrigo.png" width="250">
 </p>
 
 **2. Revelación de Información Extra**
 **Ubicación:** Sección Sobre Mí (#sobre-mi).
-**Descripción:** Al hacer clic en el botón "Ver más info", se despliega un bloque de texto oculto que contiene detalles adicionales sobre la faceta creativa del perfil. El texto del botón cambia dinámicamente a "Cerrar info" cuando el contenido está visible.**Capturas:**
+**Descripción:** Al hacer clic en el botón "Ver más info", se despliega un bloque de texto oculto que contiene detalles adicionales sobre la faceta creativa del perfil. El texto del botón cambia dinámicamente a "Cerrar info" cuando el contenido está visible.
+
+**Capturas:**
 
   <p style="text-align: center;">
-  <img src="assets/img/btn1_rodrigo.png" width="300">
+  <img src="assets/img/btn1_rodrigo.png" width="250">
 </p>
 
 <p style="text-align: center;">
-  <img src="assets/img/btn2_rodrigo.png" width="300">
+  <img src="assets/img/btn2_rodrigo.png" width="250">
 </p>
   
 **3. Navegación por Anclas**
 **Ubicación:** Menú de navegación (#nav-menu).
-**Descripción:** Utiliza identificadores de fragmento (ej. #proyectos, #habilidades) para permitir que el usuario se desplace directamente a las diferentes categorías de información dentro de la misma página.**Captura:**
+**Descripción:** Utiliza identificadores de fragmento (ej. #proyectos, #habilidades) para permitir que el usuario se desplace directamente a las diferentes categorías de información dentro de la misma página.
+
+**Captura:**
 
   <p style="text-align: center;">
   <img src="assets/img/menu2_rodrigo.png" width="300">
@@ -224,7 +246,9 @@ Estado luego del clic (color modificado)
 
 **1. Sistema de Acordeón (Secciones Desplegables)**
 **Ubicación:** Secciones de "Películas Favoritas" y "Discos Favoritos".
-**Descripción:** La función toggleSection alterna la visibilidad de los contenedores y aplica una rotación de 180° a los iconos de flecha. Permite mantener el diseño limpio y compacto.**Capturas:**
+**Descripción:** La función toggleSection alterna la visibilidad de los contenedores y aplica una rotación de 180° a los iconos de flecha. Permite mantener el diseño limpio y compacto.
+
+**Capturas:**
 
   <p style="text-align: center;">
   <img src="assets/img/desplegable1_mariana.png" width="350">
@@ -236,7 +260,9 @@ Estado luego del clic (color modificado)
 
 **2. Efecto de Enfoque "Sobresalir" (Hover & Click)**
 **Ubicación:** Galería de ítems dentro de las secciones desplegables.
-**Descripción:** Al hacer clic en un ítem (película o disco), JavaScript aplica la clase .sobresalir. Esto activa una transformación de escala (1.1x) y un resplandor de neón rojo, adelantando tanto la imagen como el texto descriptivo simultáneamente.**Captura:**
+**Descripción:** Al hacer clic en un ítem (película o disco), JavaScript aplica la clase .sobresalir. Esto activa una transformación de escala (1.1x) y un resplandor de neón rojo, adelantando tanto la imagen como el texto descriptivo simultáneamente.
+
+**Captura:**
 
   <p style="text-align: center;">
   <img src="assets/img/sobresalir_mariana.png" width="300">
@@ -244,7 +270,9 @@ Estado luego del clic (color modificado)
 
 **3. Validación de Formulario**
 **Ubicación:** Sección de Contacto (Pie de página).
-**Descripción:** Captura el evento submit, previene la recarga de la página mediante e.preventDefault(), muestra una alerta de confirmación al usuario y limpia los campos automáticamente con el método .reset().**Captura:**
+**Descripción:** Captura el evento submit, previene la recarga de la página mediante e.preventDefault(), muestra una alerta de confirmación al usuario y limpia los campos automáticamente con el método .reset().
+
+**Captura:**
 
   <p style="text-align: center;">
   <img src="assets/img/mensaje_mariana.png" width="300">
@@ -257,8 +285,10 @@ Estado luego del clic (color modificado)
 #### GIMENA (gimena.js)
 
 **1. Destacar la sección actual o activa**
-**Ubicación:** Menú
-**Descripción:** Resalta el enlace del menú que corresponde a la sección en la página. Al desplazarse por la página, el código detecta en qué sección se encuentra y marca el enlace correspondiente en el menú para que se destaque. **Captura:**
+**Ubicación:** Menú.
+**Descripción:** Resalta el enlace del menú que corresponde a la sección en la página. Al desplazarse por la página, el código detecta en qué sección se encuentra y marca el enlace correspondiente en el menú para que se destaque.
+
+**Captura:**
 
 <p style="text-align: center;">
   <img src="assets/img/menu1_gimena.png" width="300">
@@ -269,8 +299,10 @@ Estado luego del clic (color modificado)
 </p>
 
 **2. Menú hamburguesa**
-**Ubicación:** Encabezado
+**Ubicación:** Encabezado.
 **Descripción:** Permite que el menú de navegación se abra y se cierre cuando se presiona el botón con el ícono de hamburguesa. Al hacer clic en el botón, se agrega o quita una clase que hace que el menú aparezca o desaparezca.
+
+**Capturas:**
 
 <p style="text-align: center;">
   <img src="assets/img/menu_hamburguesa1_gimena.png" width="300">
@@ -290,17 +322,21 @@ Estado luego del clic (color modificado)
 **Ubicación:** Encabezado
 **Descripción:** Permite que el menú de navegación se abra y se cierre cuando se presiona el botón con el ícono de hamburguesa. Al hacer clic en el botón, se agrega o quita una clase que hace que el menú aparezca o desaparezca.
 
+**Capturas:**
+
 <p style="text-align: center;">
-  <img src="assets/img/menu_hamburguesa1_alejandra.png" width="300">
+  <img src="assets/img/menu_hamburguesa1_alejandra.png" width="250">
 </p>
 
 <p style="text-align: center;">
-  <img src="assets/img/menu_hamburguesa2_alejandra.png" width="300">
+  <img src="assets/img/menu_hamburguesa2_alejandra.png" width="250">
 </p>
 
 **2. Revelación de Información Extra**
 **Ubicación:** Sección Sobre Mí (#sobre-mi).
-**Descripción:** Al hacer clic en el botón "Ver más info", se despliega un bloque de texto oculto que contiene detalles adicionales sobre la faceta creativa del perfil. El texto del botón cambia dinámicamente a "Cerrar info" cuando el contenido está visible.**Capturas:**
+**Descripción:** Al hacer clic en el botón "Ver más info", se despliega un bloque de texto oculto que contiene detalles adicionales sobre la faceta creativa del perfil. El texto del botón cambia dinámicamente a "Cerrar info" cuando el contenido está visible.
+
+**Capturas:**
 
   <p style="text-align: center;">
   <img src="assets/img/info1_alejandra.png" width="300">
