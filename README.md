@@ -395,6 +395,7 @@ El uso de la IA fue fundamental para resolver problemas de lógica que excedían
 **TOMÁS**
 
 **Herramientas Utilizada: Gemini 3 PRO (Google)**
+
 **Uso en Contenido:** Redacción y síntesis de descripciones para las secciones de proyectos y experiencia profesional, manteniendo un tono formal e institucional. Asistencia en la redacción de la bitácora de desarrollo y este documento técnico.
 **Uso en Código y Lógica:** Refactorización: Adaptación de la estructura HTML del proyecto anterior a la nueva arquitectura grupal, migrando selectores antiguos a las nuevas variables de CSS (--fondo, --acento) y fuentes del equipo (Playfair Display y DM Sans).
 Debugging: Resolución de errores de permisos y visualización durante el despliegue en GitHub Pages y Vercel, y optimización de la alineación de tarjetas mediante propiedades avanzadas de CSS como object-fit y flex-grow.
@@ -403,27 +404,33 @@ Debugging: Resolución de errores de permisos y visualización durante el despli
 **RODRIGO**
 
 **Herramienta utilizada: Gemini 1.5 Flash (Google)**
+
 **Uso en Contenido:** Redacción y síntesis de descripciones para las secciones de proyectos y experiencia profesional, manteniendo un tono formal e institucional. Asistencia en la redacción de la bitácora de desarrollo y este documento técnico.
 **Uso en Código y Lógica:** Refactorización: Adaptación de la estructura HTML del proyecto anterior a la nueva arquitectura grupal, migrando selectores antiguos a las nuevas variables de CSS (--fondo, --acento) y fuentes del equipo (Playfair Display y DM Sans).
 Debugging: Resolución de errores de permisos y visualización durante el despliegue en GitHub Pages y Vercel, y optimización de la alineación de tarjetas mediante propiedades avanzadas de CSS como object-fit y flex-grow.
 **Imágenes:** Se utilizaron prompts específicos para la selección y ajuste de dimensiones de los posters de películas y carátulas de discos, garantizando la armonía visual del sitio.
 
 **MARIANA**
+
 **Herramientas utilizadas:**
 
 - **Gemini 3 Flash (Google)**
+
   **Uso de IA en Lógica de Formulario de Contacto:** Se implementaron mejoras para lograr una interacción más fluida y segura en el formulario. Se evitó el comportamiento nativo del envío con e.preventDefault() para impedir la recarga de la página y mostrar confirmaciones sin interrupciones. Además, se utilizó this.reset() para limpiar los campos tras el envío, dejando el formulario listo para reutilizar. Por último, se agregó una validación (if (formContacto)) para prevenir errores en páginas donde el formulario no existe, asegurando un código más robusto y reutilizable.
+
 - **ChatGPT GPT-5.3 (OpenAI)**: Sugerencias de diseño CSS responsivo.
 
 **GIMENA**
 
 **Herramienta utilizada: Claude Sonnet 4.6**
+
 **Organización del código:** Utilicé herramientas de inteligencia artificial para ayudar a organizar y estructurar el CSS y HTML, asegurando que el código sea más legible, limpio y consistente.
 **Optimización del diseño:** La IA me apoyó en la creación de una estructura eficiente para el diseño responsivo, ajustando los estilos a diferentes tamaños de pantalla.
 
 **ALEJANDRA**
 
 **Herramientas utilizadas: Gemini 3 Flash / ChatGPT GPT-5.3**
+
 **Interactividad del Perfil ("Sobre Mí"):** Se desarrolló una función en JavaScript que alterna clases dinámicas. Se incorporó scrollIntoView con comportamiento smooth para garantizar que, tras el despliegue, el usuario sea guiado automáticamente al final del contenido.
 **Debugging de Especificidad en Media Queries:** Sugerencias de diseño CSS responsivo.
 **Generación de Contenido:**Asistencia de la IA para redactar las descripciones de las secciones de "Series" y "Música". El criterio fue vincular gustos personales (como CSI o Dr. House) con habilidades propias del rol de QA, resaltando capacidades de análisis forense de datos, lógica deductiva y atención al detalle.
