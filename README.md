@@ -183,6 +183,7 @@ Estado luego del clic (color modificado)
 #### TOMÁS (tomas.js)
 
 **1. Revelación de Información Extra**
+
 **Ubicación:** Sección (#sobre-mi)
 **Descripción:** Al activarse el evento click, el script verifica el estado de visualización del contenedor #info-extra. Si está oculto (display: none), lo muestra y cambia el texto del botón; de lo contrario, lo oculta nuevamente.
 
@@ -197,6 +198,7 @@ Estado luego del clic (color modificado)
 </p>
 
 **2. Menú Navegación**
+
 **Ubicación:** Encabezado.
 **Descripción:** Se integró la lógica en main.js para el funcionamiento del menú hamburguesa (nav-toggle) en dispositivos móviles, asegurando que el menú se cierre automáticamente al seleccionar una sección.
 
@@ -209,6 +211,7 @@ Estado luego del clic (color modificado)
 #### RODRIGO (rodrigo.js)
 
 **1. Menú Lateral Desplegable (Hamburguesa)**
+
 **Ubicación:** Encabezado.
 **Descripción:** Permite abrir y cerrar el menú de navegación en dispositivos móviles al alternar la clase .open en el contenedor del menú. Además, incluye una lógica para cerrar automáticamente el menú cuando el usuario hace clic en cualquier enlace de sección.
 
@@ -219,6 +222,7 @@ Estado luego del clic (color modificado)
 </p>
 
 **2. Revelación de Información Extra**
+
 **Ubicación:** Sección Sobre Mí (#sobre-mi).
 **Descripción:** Al hacer clic en el botón "Ver más info", se despliega un bloque de texto oculto que contiene detalles adicionales sobre la faceta creativa del perfil. El texto del botón cambia dinámicamente a "Cerrar info" cuando el contenido está visible.
 
@@ -233,6 +237,7 @@ Estado luego del clic (color modificado)
 </p>
   
 **3. Navegación por Anclas**
+
 **Ubicación:** Menú de navegación (#nav-menu).
 **Descripción:** Utiliza identificadores de fragmento (ej. #proyectos, #habilidades) para permitir que el usuario se desplace directamente a las diferentes categorías de información dentro de la misma página.
 
@@ -259,6 +264,7 @@ Estado luego del clic (color modificado)
 </p>
 
 **2. Efecto de Enfoque "Sobresalir" (Hover & Click)**
+
 **Ubicación:** Galería de ítems dentro de las secciones desplegables.
 **Descripción:** Al hacer clic en un ítem (película o disco), JavaScript aplica la clase .sobresalir. Esto activa una transformación de escala (1.1x) y un resplandor de neón rojo, adelantando tanto la imagen como el texto descriptivo simultáneamente.
 
@@ -269,6 +275,7 @@ Estado luego del clic (color modificado)
 </p>
 
 **3. Validación de Formulario**
+
 **Ubicación:** Sección de Contacto (Pie de página).
 **Descripción:** Captura el evento submit, previene la recarga de la página mediante e.preventDefault(), muestra una alerta de confirmación al usuario y limpia los campos automáticamente con el método .reset().
 
@@ -279,12 +286,14 @@ Estado luego del clic (color modificado)
 </p>
 
 **4.Lógica de Cierre Global e Interrupción**
+
 **Ubicación:** Todo el documento.
 **Descripción:** Se implementó e.stopPropagation() para evitar conflictos entre los clics de las imágenes y los contenedores padres. Además, un evento global cierra cualquier ítem resaltado al hacer clic en el fondo de la página.
 
 #### GIMENA (gimena.js)
 
 **1. Destacar la sección actual o activa**
+
 **Ubicación:** Menú.
 **Descripción:** Resalta el enlace del menú que corresponde a la sección en la página. Al desplazarse por la página, el código detecta en qué sección se encuentra y marca el enlace correspondiente en el menú para que se destaque.
 
@@ -299,6 +308,7 @@ Estado luego del clic (color modificado)
 </p>
 
 **2. Menú hamburguesa**
+
 **Ubicación:** Encabezado.
 **Descripción:** Permite que el menú de navegación se abra y se cierre cuando se presiona el botón con el ícono de hamburguesa. Al hacer clic en el botón, se agrega o quita una clase que hace que el menú aparezca o desaparezca.
 
@@ -319,6 +329,7 @@ Estado luego del clic (color modificado)
 #### ALEJANDRA (alejandra.js)
 
 **1. Menú hamburguesa**
+
 **Ubicación:** Encabezado
 **Descripción:** Permite que el menú de navegación se abra y se cierre cuando se presiona el botón con el ícono de hamburguesa. Al hacer clic en el botón, se agrega o quita una clase que hace que el menú aparezca o desaparezca.
 
@@ -333,6 +344,7 @@ Estado luego del clic (color modificado)
 </p>
 
 **2. Revelación de Información Extra**
+
 **Ubicación:** Sección Sobre Mí (#sobre-mi).
 **Descripción:** Al hacer clic en el botón "Ver más info", se despliega un bloque de texto oculto que contiene detalles adicionales sobre la faceta creativa del perfil. El texto del botón cambia dinámicamente a "Cerrar info" cuando el contenido está visible.
 
@@ -347,6 +359,8 @@ Estado luego del clic (color modificado)
 </p>
 
 ## </details>
+
+---
 
 ## Uso de Inteligencia Artificial (IA).
 
@@ -379,6 +393,7 @@ El uso de la IA fue fundamental para resolver problemas de lógica que excedían
 <summary><h3>IA utilizada por los integrantes del equipo</h3> </summary>
 
 **TOMÁS**
+
 **Herramientas Utilizada: Gemini 3 PRO (Google)**
 **Uso en Contenido:** Redacción y síntesis de descripciones para las secciones de proyectos y experiencia profesional, manteniendo un tono formal e institucional. Asistencia en la redacción de la bitácora de desarrollo y este documento técnico.
 **Uso en Código y Lógica:** Refactorización: Adaptación de la estructura HTML del proyecto anterior a la nueva arquitectura grupal, migrando selectores antiguos a las nuevas variables de CSS (--fondo, --acento) y fuentes del equipo (Playfair Display y DM Sans).
@@ -386,6 +401,7 @@ Debugging: Resolución de errores de permisos y visualización durante el despli
 **Imágenes:** Se utilizaron prompts específicos para la selección y ajuste de dimensiones de los posters de películas y carátulas de discos, garantizando la armonía visual del sitio.
 
 **RODRIGO**
+
 **Herramienta utilizada: Gemini 1.5 Flash (Google)**
 **Uso en Contenido:** Redacción y síntesis de descripciones para las secciones de proyectos y experiencia profesional, manteniendo un tono formal e institucional. Asistencia en la redacción de la bitácora de desarrollo y este documento técnico.
 **Uso en Código y Lógica:** Refactorización: Adaptación de la estructura HTML del proyecto anterior a la nueva arquitectura grupal, migrando selectores antiguos a las nuevas variables de CSS (--fondo, --acento) y fuentes del equipo (Playfair Display y DM Sans).
@@ -400,11 +416,13 @@ Debugging: Resolución de errores de permisos y visualización durante el despli
 - **ChatGPT GPT-5.3 (OpenAI)**: Sugerencias de diseño CSS responsivo.
 
 **GIMENA**
+
 **Herramienta utilizada: Claude Sonnet 4.6**
 **Organización del código:** Utilicé herramientas de inteligencia artificial para ayudar a organizar y estructurar el CSS y HTML, asegurando que el código sea más legible, limpio y consistente.
 **Optimización del diseño:** La IA me apoyó en la creación de una estructura eficiente para el diseño responsivo, ajustando los estilos a diferentes tamaños de pantalla.
 
 **ALEJANDRA**
+
 **Herramientas utilizadas: Gemini 3 Flash / ChatGPT GPT-5.3**
 **Interactividad del Perfil ("Sobre Mí"):** Se desarrolló una función en JavaScript que alterna clases dinámicas. Se incorporó scrollIntoView con comportamiento smooth para garantizar que, tras el despliegue, el usuario sea guiado automáticamente al final del contenido.
 **Debugging de Especificidad en Media Queries:** Sugerencias de diseño CSS responsivo.
@@ -418,6 +436,8 @@ Nos pusimos de acuerdo en utilizar una imagen real con el siguiente prompt: "Rec
 - Gimena y Mariana: ChatGPT GPT-5.3
 
 </details>
+
+---
 
 ### Enlaces
 
