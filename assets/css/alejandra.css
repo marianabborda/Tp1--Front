@@ -1,0 +1,769 @@
+:root {
+    --fondo: #0d0d1a;
+    --fondo-2: #16213e;
+    --fondo-3: #1a1a2e;
+    --acento: #e0aaff;
+    --acento-2: #c77dff;
+    --texto: #f0e6ff;
+    --texto-suave: #a89bc2;
+    --borde: rgba(224, 170, 255, 0.15);
+    --radio: 12px;
+    --fuente-titulo: "Playfair Display", serif;
+    --fuente-cuerpo: "DM Sans", sans-serif;
+    --sombra: 0 8px 32px rgba(0, 0, 0, 0.4);
+    --max-ancho: 1100px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: var(--fuente-cuerpo);
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--fuente-titulo);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+section[id] {
+    /* Ajustamos el margen para que al navegar la sección quede 
+       bien posicionada y no se pegue al menú superior */
+    scroll-margin-top: 120px; 
+}
+
+a {
+    color: var(--acento);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--acento-2);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+/* BOTÓN  */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: transparent;
+    border: 2px solid var(--acento);
+    color: var(--acento);
+    border-radius: 50px;
+    font-family: var(--fuente-cuerpo);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+        background 0.3s,
+        color 0.3s,
+        transform 0.2s;
+}
+
+.btn:hover {
+    background: var(--acento);
+    color: var(--fondo);
+    transform: translateY(-2px);
+}
+
+/*  TÍTULO*/
+.seccion-titulo {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    color: var(--acento);
+    margin-bottom: 2.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.seccion-titulo::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 3px;
+    background: var(--acento-2);
+    margin-top: 0.4rem;
+    border-radius: 2px;
+}
+
+/*  HEADER Y NAV */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 5%;
+    background: rgba(13, 13, 26, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--borde);
+}
+
+.logo {
+    font-family: var(--fuente-titulo);
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--texto);
+    letter-spacing: -1px;
+}
+
+.dot {
+    color: var(--acento);
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--texto-suave);
+    font-weight: 400;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--acento);
+}
+
+/* Botón hamburguesa */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--acento);
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+/*  MAIN  */
+main>section {
+    max-width: var(--max-ancho);
+    margin: 0 auto;
+    padding: 5rem 5%;
+}
+
+/* SOBRE MÍ */
+
+#sobre-mi {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* CAMBIO CLAVE: Centrado vertical para que la foto baje 
+        automáticamente cuando el texto se alarga */
+    /* Alineamos al inicio para controlar el movimiento nosotros */
+    align-items: center;
+    gap: 4rem;
+    min-height: 80vh;
+    padding: 80px 5% 50px; /* Más espacio arriba para que el botón no se tape */
+}
+
+.sobre-mi-texto {
+    flex: 1;
+    min-width: 300px; /* Evita que el texto se achique demasiado */
+}
+
+.etiqueta {
+    font-size: 1rem;
+    color: var(--acento);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 0.5rem;
+}
+
+.sobre-mi-texto h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    color: var(--texto);
+    margin-bottom: 1.2rem;
+}
+
+.bio {
+    color: var(--texto-suave);
+    font-size: 1.05rem;
+    max-width: 520px;
+    margin-bottom: 2rem;
+}
+.sobre-mi-img {
+    flex: 0 0 auto;
+    /* Subimos la foto un poquito (probá con -20px o -30px hasta que te guste) */
+    margin-top: -1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: margin-top 0.4s ease; /* Para que el movimiento sea suave */
+}
+/* Esta clase la agregaremos con JS solo cuando se abra la info */
+.foto-desplazada {
+    margin-top: 10rem; /* Se ajusta este valor hasta ver nivelada con la info extra */
+}
+.foto-desplazada img {
+    transform: translateY(50px); /* Ajusta los píxeles según cuánto quieras que baje */
+}
+
+.sobre-mi-img img {
+    width: min(360px, 90vw);
+    border-radius: var(--radio);
+    /* Aseguramos que no tenga márgenes que la suban */
+    margin-bottom: 0; 
+}
+
+/*  TARJETAS */
+#tarjetas {
+    background: var(--fondo-3);
+    border-radius: var(--radio);
+    margin: 2rem auto !important;
+    max-width: var(--max-ancho) !important;
+}
+
+.tarjetas-grid {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: stretch; /* Esto hace que todas las tarjetas midan lo mismo de alto */
+}
+
+.tarjeta {
+    flex: 0 1 280px;
+    background: var(--fondo-2);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    overflow: hidden;
+    display: flex; 
+    flex-direction: column; /*imagen arriba, texto abajo */
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+    /*Aseguramos que no se pegue a los bordes en pantallas chicas */
+    width: 100%; 
+    max-width: 280px;    
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(199, 125, 255, 0.25);
+    border-color: var(--acento);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background-color: var(--fondo-2);
+    padding: 10px;
+}
+
+.tarjeta-body {
+    padding: 1.2rem;
+    flex-grow: 1; /* Esto hace que el área de texto ocupe todo el espacio sobrante */
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta-body h3 {
+    font-size: 1.2rem;
+    color: var(--texto);
+    margin-bottom: 0.5rem;
+}
+
+.tarjeta-body p {
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+}
+
+
+/*Empujamos las etiquetas (tags) al fondo para que queden alineadas */
+.tag {
+    margin-top: auto; /* Esto alinea los tags siempre al final de la tarjeta */
+    align-self: flex-start;
+}
+
+/* HABILIDADES */
+#habilidades .habilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.habilidad-col {
+    background: var(--fondo-2);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    padding: 1.8rem;
+}
+
+.habilidad-col h3 {
+    font-size: 1.1rem;
+    color: var(--acento);
+    margin-bottom: 1rem;
+    font-family: var(--fuente-cuerpo);
+    font-weight: 500;
+}
+
+.habilidad-col ul li {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--borde);
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+    transition:
+        color 0.2s,
+        padding-left 0.2s;
+}
+
+.habilidad-col ul li:last-child {
+    border-bottom: none;
+}
+
+.habilidad-col ul li:hover {
+    color: var(--texto);
+    padding-left: 0.5rem;
+}
+
+/*PELÍCULAS*/
+#peliculas {
+    background: var(--fondo-3);
+    border-radius: var(--radio);
+    margin: 2rem auto !important;
+    max-width: var(--max-ancho) !important;
+}
+
+.peliculas-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.pelicula {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    background: var(--fondo-2);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    padding: 1.5rem;
+    transition: border-color 0.3s;
+}
+
+.pelicula:hover {
+    border-color: var(--acento-2);
+}
+
+/* Ajuste específico para la lista de películas/series */
+.pelicula img {
+    width: 120px;
+    height: auto; /* Deja que la altura se ajuste sola al póster */
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.pelicula-info h3 {
+    font-size: 1.3rem;
+    color: var(--acento);
+    margin-bottom: 0.7rem;
+}
+
+.pelicula-info p {
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+}
+
+/*FORMULARIO DE CONTACTO*/
+#contacto {
+    text-align: center;
+}
+
+.contacto-sub {
+    color: var(--texto-suave);
+    margin-bottom: 2.5rem;
+    font-size: 1.05rem;
+}
+
+.form-contacto {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-fila {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.2rem;
+}
+
+.form-grupo {
+    flex: 1 1 240px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+label {
+    font-size: 0.85rem;
+    color: var(--acento);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+input {
+    padding: 0.85rem 1rem;
+    background: var(--fondo-2);
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    color: var(--texto);
+    font-family: var(--fuente-cuerpo);
+    font-size: 1rem;
+    transition:
+        border-color 0.3s,
+        box-shadow 0.3s;
+    outline: none;
+    width: 100%;
+}
+
+input::placeholder {
+    color: var(--texto-suave);
+}
+
+input:focus {
+    border-color: var(--acento);
+    box-shadow: 0 0 0 3px rgba(224, 170, 255, 0.15);
+}
+
+
+.form-grupo-full {
+    flex: 1 1 100%;
+}
+
+textarea {
+    padding: 0.85rem 1rem;
+    background: var(--fondo-2);
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    color: var(--texto);
+    font-family: var(--fuente-cuerpo);
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    outline: none;
+    width: 100%;
+    resize: vertical;
+    min-height: 120px;
+}
+
+textarea::placeholder {
+    color: var(--texto-suave);
+}
+
+textarea:focus {
+    border-color: var(--acento);
+    box-shadow: 0 0 0 3px rgba(224, 170, 255, 0.15);
+}
+
+.btn-form {
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+/* FOOTER */
+/*footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem 5%;
+    border-top: 1px solid var(--borde);
+    max-width: var(--max-ancho);
+    margin: 0 auto;
+}
+
+.footer-copy {
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-links a {
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--acento);
+}*/
+footer {
+    display: flex;
+    justify-content: space-between; /* Uno a cada punta */
+    align-items: center;
+    padding: 2rem 5%;
+    border-top: 1px solid var(--borde);
+    max-width: var(--max-ancho);
+    margin: 0 auto;
+    background: var(--fondo);
+}
+
+.copyright {
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+}
+
+.redes-sociales {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.link-red {
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+    transition: color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Espacio entre el ícono y el texto */
+}
+
+.link-red:hover {
+    color: var(--acento);
+    transform: translateY(-2px);
+}
+
+.link-red i {
+    font-size: 1.1rem; /* Íconos un poquito más grandes */
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#sobre-mi .sobre-mi-texto {
+    animation: fadeUp 0.8s ease both;
+}
+
+#sobre-mi .sobre-mi-img {
+    animation: fadeUp 0.8s 0.2s ease both;
+}
+#preferencias {
+    /* Por defecto las secciones tienen 5rem (unos 80px) de espacio arriba */
+    /* Lo bajamos a 2rem para que suba y quede más cerca de lo anterior */
+    padding-top: 2rem !important; 
+}
+
+#preferencias .seccion-titulo {
+    margin-bottom: 1.5rem; /* Achicamos el espacio debajo del título "Preferencias" */
+}
+
+/* =======================================================
+   ESTADO 2: TABLET (max-width: 1024px)
+   Punto de quiebre intermedio para tablets grandes y iPads
+   ======================================================= */
+@media (max-width: 1024px) {
+    #sobre-mi {
+        gap: 2rem; /* Achicamos el espacio entre foto y texto */
+    }
+    
+    .tarjetas-grid {
+        gap: 1rem;
+    }
+    /* Subimos las secciones de Preferencias (Series y Música) */
+    #series, #musica, #preferencias {
+        padding-top: 2.5rem !important; /* Reducimos el aire superior */
+        padding-bottom: 1.5rem;
+    }
+
+    /* Acortamos la distancia entre el título y el botón */
+    .seccion-titulo {
+        margin-bottom: 1.8rem !important;
+    }
+
+    /* Ajuste para la sección sobre-mi en esta resolución */
+    #sobre-mi {
+        padding-top: 100px; /* Un poco menos que en desktop */
+        gap: 3rem;
+    }
+
+    /* Reducimos el tamaño de la foto un poquito para que no empuje todo abajo */
+    .sobre-mi-img img {
+        width: 320px;
+    }
+}
+
+/* RESPONSIVE (max 768px)*/
+
+@media (max-width: 768px) {
+
+    /* Header: mostrar hamburguesa, y se oculta el nav */
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: var(--fondo-3);
+        padding: 1.5rem;
+        gap: 1rem;
+        border-bottom: 1px solid var(--borde);
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    #sobre-mi {
+        flex-direction: column-reverse;
+        gap: 2rem;
+        min-height: auto;
+        text-align: center;
+        /*Ajuste de padding para móviles */
+        padding-top: 80px; 
+    }
+
+    /*Quitamos el margen negativo de la foto en móviles para que no se suba al texto */
+    .sobre-mi-img {
+        margin-top: 0 !important; 
+        margin-bottom: 1rem;
+    }
+
+    .bio {
+        margin: 0 auto 2rem;
+    }
+   
+    .tarjetas-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    /* Ajuste para que las tarjetas de series no queden gigantes */
+    .tarjeta {
+        flex: 0 1 240px; 
+        border: 1px solid var(--borde);
+        transition: all 0.3s ease;
+        
+    }
+    /* Solo se ilumina al pasar el mouse (PC) o tocar (Mobile) */
+    /* Si querés un movimiento más sutil en tabletas, podés ajustarlo aquí */
+    .tarjeta:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(199, 125, 255, 0.3) !important;
+        border-color: var(--acento) !important;
+    }
+
+    /* Reducimos el espacio de las secciones Preferencias/Series/Música */
+    #series, #musica {
+        padding-top: 1.5rem !important; /* Subimos el contenido */
+        padding-bottom: 1rem;
+    }
+
+    /* Reducimos el espacio excesivo debajo del título de sección */
+    .seccion-titulo {
+        margin-bottom: 1.5rem !important;
+    }
+
+    /* Subimos el título "Música" achicando el margen superior */
+    #musica {
+        padding-top: 1rem !important; /* Reducimos drásticamente el aire superior */
+    }
+ 
+    /* Reducimos el margen del título de sección para que el botón esté cerca */
+    #musica .seccion-titulo {
+        margin-bottom: 1rem !important;
+    }
+
+    /* Ajuste de Contacto para que se vea el botón (el que pediste antes) */
+    #contacto {
+        padding-top: 3rem !important;
+        padding-bottom: 2rem;
+    }
+
+    #contacto form {
+        gap: 0.7rem !important;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* RESPONSIVE (max 480px)*/
+@media (max-width: 480px) {
+    main>section {
+        padding: 3rem 4%;
+    }
+
+    /*Forzamos el centrado de las tarjetas en el grid */
+    .tarjetas-grid {
+        gap: 1rem;
+        display: flex;          /* Aseguramos que sea flex */
+        justify-content: center; /* Centra las tarjetas horizontalmente */
+        align-items: center;    /* Alinea verticalmente */
+    }
+    
+    .tarjeta {
+        flex: 1 1 100%;
+        max-width: 300px;       /* Un poquito más anchas para que luzcan */
+        margin: 0 auto;         /* Refuerza el centrado */
+    }
+
+    /* También centramos los títulos de las secciones para que todo sea armónico */
+    .seccion-titulo {
+        display: block;
+        text-align: center;
+        margin: 0 auto 2rem;
+    }
+
+    /*El subrayado del título también debe centrarse */
+    .seccion-titulo::after {
+        margin: 0.4rem auto 0;
+    }
+}
+
+
+
+    
